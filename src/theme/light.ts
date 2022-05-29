@@ -1,0 +1,21 @@
+export default {
+  COLORS: {
+    BACKGROUND: "#FFF",
+
+    PRIMARY_900: "#272A37",
+    PRIMARY_800: "#323644",
+    PRIMARY_700: "#8F94A3",
+
+    INFO: "#1D90F5",
+    INFO_RGB: "29, 144, 245",
+    ERROR: "#F00111",
+    ERROR_RGB: "240, 1, 17",
+    SUCCESS: "#3CB371",
+    SUCCESS_RGB: "60, 179, 113",
+
+    TEXT_PRIMARY: "#222",
+    TEXT_SECONDARY: "#080808",
+    TEXT_SECONDARY_1: "#999999"
+
+  }
+}

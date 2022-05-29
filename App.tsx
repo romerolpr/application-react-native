@@ -1,20 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { useState, useEffect } from 'react'
+import { ThemeProvider } from 'styled-components/native'
+import { Auth } from './src/screens/Auth/View'
+import { Home } from './src/screens/Home/View'
+import light from './src/theme/light'
+import dark from './src/theme/dark'
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+  const [authorized, setAuthorized] = useState<boolean>(false)
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+  const Render = (): JSX.Element => {
+    if (authorized) {
+      return <Home />
+    }
+    return <Auth />
+  }
+
+  return (
+    <ThemeProvider theme={light}>
+      <Render />
+    </ThemeProvider>
+  )
+}
